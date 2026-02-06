@@ -1,4 +1,5 @@
-<!DOCTYPE html><html lang="vi">
+<!DOCTYPE html>
+<html lang="vi">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -37,12 +38,17 @@
     .no { background: #f44336; color: #fff; }
   </style>
 </head>
-<body><div class="box">
+<body>
+
+<div class="box">
   <h2>🔞 Xác Minh Độ Tuổi</h2>
   <p>Bạn có đủ 18 tuổi để tiếp tục truy cập nội dung này không?</p>
   <button class="yes" onclick="acceptAge()">Tôi trên 18 tuổi</button>
   <button class="no" onclick="denyAge()">Tôi dưới 18 tuổi</button>
-</div><script>
+</div>
+
+<script>
+  // Nếu đã xác minh rồi thì vào thẳng trang chủ
   if (sessionStorage.getItem('ageVerified') === 'true') {
     window.location.href = 'indax.html';
   }
@@ -53,7 +59,9 @@
   }
 
   function denyAge() {
-    alert('Nội dung này không phù hợp với bạn.');
+    window.location.href = 'duoi18.html';
   }
-</script></body>
+</script>
+
+</body>
 </html>
