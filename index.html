@@ -1,0 +1,59 @@
+<!DOCTYPE html><html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Xác Minh Độ Tuổi</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background: #121212;
+      color: #fff;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+    }
+    .box {
+      background: #1e1e1e;
+      padding: 20px;
+      border-radius: 10px;
+      text-align: center;
+      max-width: 320px;
+      width: 90%;
+    }
+    h2 { margin-bottom: 10px; }
+    p { font-size: 14px; color: #ccc; }
+    button {
+      width: 100%;
+      padding: 10px;
+      margin-top: 10px;
+      border: none;
+      border-radius: 6px;
+      font-size: 16px;
+      cursor: pointer;
+    }
+    .yes { background: #4caf50; color: #fff; }
+    .no { background: #f44336; color: #fff; }
+  </style>
+</head>
+<body><div class="box">
+  <h2>🔞 Xác Minh Độ Tuổi</h2>
+  <p>Bạn có đủ 18 tuổi để tiếp tục truy cập nội dung này không?</p>
+  <button class="yes" onclick="acceptAge()">Tôi trên 18 tuổi</button>
+  <button class="no" onclick="denyAge()">Tôi dưới 18 tuổi</button>
+</div><script>
+  if (sessionStorage.getItem('ageVerified') === 'true') {
+    window.location.href = 'indax.html';
+  }
+
+  function acceptAge() {
+    sessionStorage.setItem('ageVerified', 'true');
+    window.location.href = 'indax.html';
+  }
+
+  function denyAge() {
+    alert('Nội dung này không phù hợp với bạn.');
+  }
+</script></body>
+</html>
